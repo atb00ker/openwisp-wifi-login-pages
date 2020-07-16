@@ -1,4 +1,4 @@
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 
 import logout from "../../actions/logout";
 import Component from "./status";
@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     language: state.language,
     orgSlug: state.organization.configuration.slug,
     cookies: ownProps.cookies,
+    captivePortalForm: state.organization.configuration.components.captive_portal_form,
   };
 };
 
